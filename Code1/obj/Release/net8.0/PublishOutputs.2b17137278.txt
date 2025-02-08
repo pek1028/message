@@ -1,0 +1,11 @@
+C:\Users\pek\source\repos\Code1\Code1\obj\Release\net8.0\PubTmp\Out\Code1.exe
+C:\Users\pek\source\repos\Code1\Code1\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
+C:\Users\pek\source\repos\Code1\Code1\obj\Release\net8.0\PubTmp\Out\appsettings.json
+C:\Users\pek\source\repos\Code1\Code1\obj\Release\net8.0\PubTmp\Out\Code1.dll
+C:\Users\pek\source\repos\Code1\Code1\obj\Release\net8.0\PubTmp\Out\Code1.deps.json
+C:\Users\pek\source\repos\Code1\Code1\obj\Release\net8.0\PubTmp\Out\Code1.runtimeconfig.json
+C:\Users\pek\source\repos\Code1\Code1\obj\Release\net8.0\PubTmp\Out\Code1.pdb
+C:\Users\pek\source\repos\Code1\Code1\obj\Release\net8.0\PubTmp\Out\Microsoft.OpenApi.dll
+C:\Users\pek\source\repos\Code1\Code1\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\pek\source\repos\Code1\Code1\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\pek\source\repos\Code1\Code1\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll

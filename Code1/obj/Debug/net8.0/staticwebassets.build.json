@@ -1,0 +1,125 @@
+{
+  "Version": 1,
+  "Hash": "keV/udSOqLBKFhfC5FgVagOJoF8kV1uRuCZGK5Cy3Pc=",
+  "Source": "Code1",
+  "BasePath": "_content/Code1",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Code1\\wwwroot",
+      "Source": "Code1",
+      "ContentRoot": "C:\\Users\\pek\\source\\repos\\Code1\\Code1\\wwwroot\\",
+      "BasePath": "_content/Code1",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\pek\\source\\repos\\Code1\\Code1\\wwwroot\\test.html",
+      "SourceId": "Code1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pek\\source\\repos\\Code1\\Code1\\wwwroot\\",
+      "BasePath": "_content/Code1",
+      "RelativePath": "test#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fv2rsxvttt",
+      "Integrity": "tchOvpvwGPjgyj5zpaHoKqjqeyVL2cWzUhyolurc+t0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\test.html"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "test.fv2rsxvttt.html",
+      "AssetFile": "C:\\Users\\pek\\source\\repos\\Code1\\Code1\\wwwroot\\test.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11758"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tchOvpvwGPjgyj5zpaHoKqjqeyVL2cWzUhyolurc+t0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Feb 2025 08:37:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fv2rsxvttt"
+        },
+        {
+          "Name": "label",
+          "Value": "test.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tchOvpvwGPjgyj5zpaHoKqjqeyVL2cWzUhyolurc+t0="
+        }
+      ]
+    },
+    {
+      "Route": "test.html",
+      "AssetFile": "C:\\Users\\pek\\source\\repos\\Code1\\Code1\\wwwroot\\test.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11758"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tchOvpvwGPjgyj5zpaHoKqjqeyVL2cWzUhyolurc+t0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Feb 2025 08:37:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tchOvpvwGPjgyj5zpaHoKqjqeyVL2cWzUhyolurc+t0="
+        }
+      ]
+    }
+  ]
+}

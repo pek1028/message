@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Service Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        input, button, textarea {
+            margin: 10px;
+            padding: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test Web Service API</h1>
+
+    <h2>Add Message</h2>
+    <textarea id="messageText" placeholder="Enter your message"></textarea><br>
+    <input type="text" id="userIdAdd" placeholder="Your User ID"><br>
+    <input type="text" id="sendUserId" placeholder="Sender's User ID"><br>
+    <button onclick="addMessage()">Add Message</button>
+
+    <h2>Delete Message</h2>
+    <input type="text" id="messageIdDelete" placeholder="Message ID to delete"><br>
+    <input type="text" id="userIdDelete" placeholder="Your User ID"><br>
+    <button onclick="deleteMessage()">Delete Message</button>
+
+    <h2>Get Active Messages</h2>
+    <input type="text" id="userIdActive" placeholder="User ID to get active messages"><br>
+    <button onclick="getActiveMessages()">Get Active Messages</button>
+    <pre id="activeMessagesResult"></pre>
+
+    <h2>Get User Messages</h2>
+    <input type="text" id="userIdMessages" placeholder="User ID to get messages"><br>
+    <button onclick="getUserMessages()">Get User Messages</button>
+    <pre id="userMessagesResult"></pre>
+
+    <h2>Set Message as Read</h2>
+    <input type="text" id="messageIdRead" placeholder="Message ID to mark as read"><br>
+    <input type="text" id="userIdRead" placeholder="Your User ID"><br>
+    <button onclick="setMessageRead()">Set Message as Read</button>
+
+    <h2>Get Emojis</h2>
+    <button onclick="getEmojis()">Get Emojis</button>
+    <pre id="emojisResult"></pre>
+
+    <h2>Get All Users</h2>
+    <button onclick="getAllUsers()">Get All Users</button>
+    <pre id="usersResult"></pre>
+
+    <script>
+        const apiUrl = "https://localhost:5001/api/webservice"; // Change to your API URL
+
+        async function addMessage() {
+            const messageText = document.getElementById("messageText").value;
+            const userId = document.getElementById("userIdAdd").value;
+            const sendUserId = document.getElementById("sendUserId").value;
+
+            const response = await fetch(`${apiUrl}/message`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    Text: messageText,
+                    UserId: userId,
+                    SendUserId: sendUserId
+                })
+            });
+
+            const result = await response.json();
+            alert("Message added successfully: " + result.success);
+        }
+
+        async function deleteMessage() {
+            const messageId = document.getElementById("messageIdDelete").value;
+            const userId = document.getElementById("userIdDelete").value;
+
+            const response = await fetch(`${apiUrl}/message/${messageId}?userId=${userId}`, {
+                method: 'DELETE',
+            });
+
+            const result = await response.json();
+            alert("Message deleted: " + result.success);
+        }
+
+        async function getActiveMessages() {
+            const userId = document.getElementById("userIdActive").value;
+
+            const response = await fetch(`${apiUrl}/messages/active/${userId}`);
+            const messages = await response.json();
+            document.getElementById("activeMessagesResult").textContent = JSON.stringify(messages, null, 2);
+        }
+
+        async function getUserMessages() {
+            const userId = document.getElementById("userIdMessages").value;
+
+            const response = await fetch(`${apiUrl}/messages/${userId}`);
+            const messages = await response.json();
+            document.getElementById("userMessagesResult").textContent = JSON.stringify(messages, null, 2);
+        }
+
+        async function setMessageRead() {
+            const messageId = document.getElementById("messageIdRead").value;
+            const userId = document.getElementById("userIdRead").value;
+
+            const response = await fetch(`${apiUrl}/message/read`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    MessageId: messageId,
+                    UserId: userId
+                })
+            });
+
+            const result = await response.json();
+            alert("Message marked as read: " + result.success);
+        }
+
+        async function getEmojis() {
+            const response = await fetch(`${apiUrl}/emojis`);
+            const emojis = await response.json();
+            document.getElementById("emojisResult").textContent = JSON.stringify(emojis, null, 2);
+        }
+
+        async function getAllUsers() {
+            const response = await fetch(`${apiUrl}/users`);
+            const users = await response.json();
+            document.getElementById("usersResult").textContent = JSON.stringify(users, null, 2);
+        }
+    </script>
+</body>
+</html>
